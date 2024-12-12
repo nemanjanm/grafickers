@@ -1,0 +1,46 @@
+.image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #272827;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    z-index: -1; 
+}
+.image::before {
+    content: ''; /* Required for the pseudo-element to work */
+    position: absolute; /* Positioning within the parent */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1; /* Make sure the overlay is above the image */
+}
+.text{
+    background-color: rgb(174, 175, 175, 0.5);
+    color: rgb(227, 41, 42);
+}
+svg {
+    width: 80px;
+    height: 80px;
+    fill: white;
+}
+
+a{
+    font-size: 40px; 
+    text-decoration: none; 
+    color: white;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+a:hover{
+    color: #f16c4c;
+    transform: scale(1.4);
+}
